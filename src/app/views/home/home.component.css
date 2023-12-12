@@ -1,0 +1,7 @@
+.unk{
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: transparent;
+    background-clip: text;
+    width: fit-content;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
