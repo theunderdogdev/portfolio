@@ -30,11 +30,23 @@
   mask-image: url("/assets/masks/island-mask.svg");
   animation: float 3s infinite alternate ease-in-out;
 }
-.ext-link{
-    transition-property: color;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in-out;
-    @apply font-normal text-slate-200 hover:text-emerald-500;
+.ext-link {
+  transition-property: color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  @apply font-normal text-slate-200 hover:text-emerald-500;
+}
+.tool-tip-link {
+  @apply relative font-normal;
+}
+.tool-tip-link::before {
+  content: attr(data-tooltip);
+  transform: translateY(-100%);
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  @apply text-xs opacity-0 invisible absolute left-0 bg-slate-300 text-slate-950 whitespace-nowrap px-3 py-1 font-light rounded-md;
+}
+.tool-tip-link:hover:before {
+  @apply opacity-100 visible;
 }
 @keyframes float {
   from {

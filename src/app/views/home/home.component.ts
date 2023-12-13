@@ -9,5 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  funPrank(){
+    //Todo: Link it to Never Gonna give you up with a timeout
+  }
+  
 }
