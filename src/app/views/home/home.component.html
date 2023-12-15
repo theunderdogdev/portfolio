@@ -18,7 +18,9 @@
       fields. Till date I've been exploring this field and it amazes me every single day.
     </p>
     <p class="mt-7 md:mt-10 pl-5 font-thin text-slate-300 text-base lg:text-lg">
-      Finally I would like to say to this computer world: <br /><a data-tooltip="Don't click me!!" class="tool-tip-link" href="#">"Never gonna give you up"</a>
+      Finally I would like to say to this computer world: <br /><a (click)="funPrank($event)" data-tooltip="Don't click me!!" class="tool-tip-link" href="#"
+        >"Never gonna give you up"</a
+      >
     </p>
     <h5 class="text-base lg:text-2xl">
       <span class="brck">{{ "}" }}</span>
@@ -28,3 +30,16 @@
     <img src="/assets/images/profile.jpg" alt="" />
   </div>
 </div>
+<dialog class="dialog outline-none h-screen w-full bg-transparent" #dialog role="alert">
+  <div class="relative px-8 flex flex-col py-2 w-[calc(100%-2rem)] min-h-[15rem] md:w-3/4 lg:w-1/2 bg-slate-100 m-auto rounded-3xl">
+    @if (videoEnded) {
+    <button (click)="closeModal()" class="close-btn absolute top-3 right-4">
+      <span class="material-symbols-rounded font-extralight text-3xl"> close </span>
+    </button>
+    <img class="w-40 aspect-square mx-auto my-10 no-drag drop-shadow-md" src="/assets/images/warning-sign.png" alt="" />
+    <h2 class="my-5 px-3 py-1 rounded text-xl text-center bg-emerald-500 bg-opacity-40">Hey told you to follow the rules!! 😂</h2>
+    } @else {
+    <video style="width: 100%; aspect-ratio: 16/9; margin-block: 2.7rem; border-radius: 25px" src="assets/images/prank.mp4"></video>
+    }
+  </div>
+</dialog>

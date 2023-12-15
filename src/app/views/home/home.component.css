@@ -48,6 +48,16 @@
 .tool-tip-link:hover:before {
   @apply opacity-100 visible;
 }
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+.close-btn{
+  @apply rounded-full w-10 h-10 flex items-center justify-center border border-slate-600 ;
+}
+.dialog[open]{
+  display: flex;
+}
 @keyframes float {
   from {
     transform: translate(0%, -10px);

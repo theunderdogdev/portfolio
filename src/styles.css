@@ -309,3 +309,15 @@ i.bi {
     padding-left: initial;
   }
 }
+.no-drag{
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+dialog{
+  max-width: 100vw;
+  max-height: 100dvh;
+}
