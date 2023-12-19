@@ -1,0 +1,39 @@
+.projects{
+    @apply p-3 min-w-[5rem] w-max h-screen fixed top-0 left-0 flex flex-col overflow-y-auto gap-y-4;
+}
+.project {
+  transition-property: color, background-color, border;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  @apply relative border border-transparent rounded-md font-light w-40 flex flex-col items-center justify-center px-4 py-3 gap-2 bg-slate-300 bg-opacity-5 hover:bg-slate-300 hover:bg-opacity-10;
+}
+.project.selected {
+  @apply text-emerald-400 border-emerald-400;
+}
+.indicator {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+  filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #34d399;
+  transition-property: opacity, visibility;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.project.selected .indicator {
+  @apply opacity-100 visible;
+}
+
+.project span {
+  @apply block;
+}
+.project .icon {
+  @apply text-5xl;
+}
+.title {
+  @apply w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap;
+}

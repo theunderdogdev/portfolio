@@ -1,3 +1,9 @@
-<!-- <div class="w-full grid grid"></div> -->
-
-<!-- Think of a cool layout -->
+<div class="projects">
+  @for (project of projects; track project.id) {
+  <button class="project" (click)="getProject(project.id, project.html_url)" [ngClass]="{ selected: currId === project.id }">
+    <span class="icon material-symbols-rounded"> regular_expression </span>
+    <span class="title capitalize"> {{ project.name }} </span>
+    <span class="indicator"></span>
+  </button>
+  }
+</div>
