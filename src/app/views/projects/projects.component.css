@@ -1,5 +1,40 @@
-.projects{
-    @apply p-3 min-w-[5rem] w-max h-screen fixed top-0 left-0 flex flex-col overflow-y-auto gap-y-4;
+.projects {
+  @apply p-3 w-screen h-28 flex fixed top-0 left-0 overflow-x-auto gap-x-4;
+}
+.projects::-webkit-scrollbar {
+  display: none;
+}
+.project-detail {
+  --x: 20px;
+  --y: 20px;
+  --width: 0px;
+  width: calc(100% - 1rem);
+  height: calc(100vh - 8rem);
+  @apply rounded-2xl relative mt-[6.5rem] p-8 overflow-hidden;
+}
+.project-detail:hover::before {
+  opacity: 1;
+}
+.project-detail::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background: radial-gradient(
+    var(--width) circle at var(--x) var(--y),
+    rgba(52, 211, 153, 0.1),
+    transparent 60%
+  );
+  z-index: -1;
+}
+.divider {
+  background-color: #656262;
+  height: 1px;
+  width: 75%;
 }
 .project {
   transition-property: color, background-color, border;
@@ -32,8 +67,14 @@
   @apply block;
 }
 .project .icon {
-  @apply text-5xl;
+  @apply text-4xl;
 }
 .title {
-  @apply w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap;
+  @apply w-full text-xs text-ellipsis overflow-hidden whitespace-nowrap;
+}
+.custom-ul {
+  text-decoration: underline;
+  text-underline-offset: 0.35rem;
+  text-decoration-color: #34d399;
+  text-decoration-thickness: 2px;
 }

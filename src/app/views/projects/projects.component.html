@@ -1,9 +1,31 @@
 <div class="projects">
   @for (project of projects; track project.id) {
-  <button class="project" (click)="getProject(project.id, project.html_url)" [ngClass]="{ selected: currId === project.id }">
+  <button [attr.data-id]="project.id" [attr.data-name]="project.name" class="project" (click)="getProject($event)" [ngClass]="{ selected: currId === project.id }">
     <span class="icon material-symbols-rounded"> regular_expression </span>
     <span class="title capitalize"> {{ project.name }} </span>
     <span class="indicator"></span>
   </button>
   }
+</div>
+<div class="project-detail" (mousemove)="setProps($event)">
+  <h3 class="name w-fit py-1 text-4xl font-light custom-ul">Lorem Ipsum</h3>
+  <p class="text-base mt-7 text-slate-300 font-extralight">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, eius earum. At placeat ipsa unde ducimus rem illo sed nesciunt, laborum blanditiis possimus natus minima
+    assumenda sequi expedita obcaecati veritatis.
+  </p>
+  <div class="divider mx-auto my-12"></div>
+  <h4 class="flex gap-4 items-center opacity-70">
+    <span class="!text-4xl material-symbols-rounded text-slate-300 font-thin">commit</span> <span class="custom-ul">12 Jan, 2023</span>
+  </h4>
+  <div class="meta flex flex-col gap-y-1">
+    <h4 class="flex gap-4 items-center opacity-70"><span class="!text-4xl material-symbols-rounded text-yellow-400 font-thin">star</span> <span class="custom-ul">12 </span></h4>
+    <h4 class="flex gap-4 items-center opacity-70"><span class="!text-4xl material-symbols-rounded font-thin">code</span> <span class="custom-ul">HTML </span></h4>
+    <h4 class="flex gap-4 items-center opacity-70"><span class="!text-4xl material-symbols-rounded font-thin">fork_left</span> <span class="custom-ul">5 </span></h4>
+  </div>
+  <div class="labels mt-5">
+    <h5 class="label px-3 py-1 inline-flex items-center gap-1 text-sm"><span class="material-symbols-rounded !text-2xl text-emerald-400"> tag </span> label 1</h5>
+    <h5 class="label px-3 py-1 inline-flex items-center gap-1 text-sm"><span class="material-symbols-rounded !text-2xl text-emerald-400"> tag </span> label 1</h5>
+    <h5 class="label px-3 py-1 inline-flex items-center gap-1 text-sm"><span class="material-symbols-rounded !text-2xl text-emerald-400"> tag </span> label 1</h5>
+    <h5 class="label px-3 py-1 inline-flex items-center gap-1 text-sm"><span class="material-symbols-rounded !text-2xl text-emerald-400"> tag </span> label 1</h5>
+  </div>
 </div>
