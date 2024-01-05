@@ -1,10 +1,4 @@
-import {
-  Component,
-  ViewChild,
-  AfterViewInit,
-  ElementRef,
-  OnInit,
-} from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit {
   @ViewChild('dialog') dialog: ElementRef<HTMLDialogElement> | null = null;
   videoEnded: boolean = false;
   funPrank(evt: Event) {
@@ -25,14 +19,13 @@ export class HomeComponent implements AfterViewInit {
       if (video) {
         video.currentTime = 0.0;
         video.muted = false;
-        video.play().catch((err)=>{
+        video.play().catch((err) => {
           console.clear();
           console.log(err);
           this.dialog?.nativeElement.close();
-
         });
         video.addEventListener('ended', () => {
-          video.pause()
+          video.pause();
           this.videoEnded = true;
         });
         // document.removeChild()
@@ -40,8 +33,8 @@ export class HomeComponent implements AfterViewInit {
     }, 5000);
     //Todo: Link it to Never Gonna give you up with a timeout
   }
-  ngAfterViewInit(): void {
-    // console.log(this.dialog?.nativeElement.showModal());
+  ngOnInit(): void {
+    
   }
   closeModal() {
     this.videoEnded = false;

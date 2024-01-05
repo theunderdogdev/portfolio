@@ -10,7 +10,7 @@
   --width: 0px;
   width: calc(100% - 1rem);
   height: calc(100vh - 8rem);
-  @apply rounded-2xl relative mt-[6.5rem] p-8 overflow-hidden;
+  @apply rounded-2xl relative mt-[6.5rem] p-8 overflow-hidden mx-auto;
 }
 .project-detail:hover::before {
   opacity: 1;

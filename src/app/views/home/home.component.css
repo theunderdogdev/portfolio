@@ -3,7 +3,7 @@
   font-weight: 600;
   letter-spacing: 6px;
   font-size: clamp(3rem, 2.2105rem + 4.2105vw, 6rem) !important;
-  @apply flex flex-col w-fit justify-center text-5xl xl:text-8xl gap-3 lg:gap-8;
+  @apply  w-fit justify-center text-5xl xl:text-8xl;
 }
 .titantron span {
   display: block;
