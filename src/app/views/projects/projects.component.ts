@@ -4,11 +4,10 @@ import { ProjectService } from '../../services/project.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css',
+    selector: 'app-projects',
+    imports: [CommonModule],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[] = [];

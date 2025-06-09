@@ -50,10 +50,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/fonts/stylesheet.css",
-              "src/assets/icons/bootstrap-icons.css",
-              "src/assets/icons/material.css"
+              "src/styles.css"
             ],
             "scripts": []
           },

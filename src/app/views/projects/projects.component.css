@@ -1,3 +1,4 @@
+@import "../../../imports.css";
 .projects {
   @apply p-3 w-screen h-28 flex fixed top-0 left-0 overflow-x-auto gap-x-4;
 }
@@ -40,7 +41,7 @@
   transition-property: color, background-color, border;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
-  @apply relative border border-transparent rounded-md font-light w-40 flex flex-col items-center justify-center px-4 py-3 gap-2 bg-slate-300 bg-opacity-5 hover:bg-slate-300 hover:bg-opacity-10;
+  @apply relative border border-transparent rounded-md font-light w-40 flex flex-col items-center justify-center px-4 py-3 gap-2 bg-slate-300 hover:bg-slate-300;
 }
 .project.selected {
   @apply text-emerald-400 border-emerald-400;

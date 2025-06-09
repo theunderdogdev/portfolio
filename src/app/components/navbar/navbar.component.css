@@ -1,3 +1,4 @@
+@import "../../../imports.css";
 nav {
   box-shadow: 0px 0px 1.5rem #ffffff33;
   @apply z-10 h-auto w-fit bg-[#212121] rounded-full fixed bottom-[6rem] right-5 opacity-0 transition-all invisible duration-500;
