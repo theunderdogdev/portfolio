@@ -6,5 +6,5 @@ import { ProjectsComponent } from './views/projects/projects.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'more', component: MoreComponent },
-  { path: 'projects', component: ProjectsComponent },
+  { path: 'work', component: ProjectsComponent },
 ];

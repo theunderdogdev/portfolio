@@ -30,8 +30,8 @@ export class NavbarComponent {
       accent: '33, 196, 93',
     },
     {
-      name: 'projects',
-      path: '/projects',
+      name: 'work',
+      path: '/work',
       icon: 'tactic',
       accent: '244, 63, 94',
     },
