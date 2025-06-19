@@ -1,1 +1,21 @@
-@import url("../../../imports.css");
+@import "../../../imports.css";
+.outlined-text {
+  -webkit-text-stroke: 2px var(--theme-color);
+  color: transparent;
+}
+.meta-title > span:not(:first-child)::before {
+  content: "\00a0\007c\00a0";
+}
+
+/* .animate-bg{
+  animation: backgroundScale 4s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundScale {
+  from{
+    background-size: 10%;
+  }
+  to{
+    background-size: 30%;
+  }
+} */

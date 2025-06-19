@@ -1,6 +1,6 @@
 @import "../../../imports.css";
 nav {
-  @apply py-5 px-3 flex flex-col items-center gap-y-5 z-10 h-auto w-fit rounded-full fixed bottom-[6rem] right-5 opacity-0 transition-all invisible duration-500;
+  @apply py-5 px-2 flex flex-col items-center gap-y-5 z-10 h-auto w-fit rounded-full fixed bottom-[6rem] right-5 opacity-0 transition-all invisible duration-500;
 }
 nav.active {
   opacity: 1;
@@ -10,15 +10,15 @@ nav.active {
   @apply z-10 fixed bottom-5 right-6 text-slate-800 text-4xl rounded-full w-11 h-11 border border-slate-800 flex items-center justify-center;
 }
 .nav-link {
-  @apply flex flex-col items-center justify-center w-fit h-fit relative;
+  @apply w-fit flex flex-col items-center justify-center h-fit;
 }
 .nav-link .icon{
   @apply text-4xl
 }
 .nav-link .text-info{
-  @apply text-xs;
+  @apply text-xs rounded px-1 uppercase;
 }
-.nav-link.active {
-  color: rgba(var(--accent), 1);
+.nav-link.active .text-info{
+  @apply bg-slate-900 text-white;
 }
 

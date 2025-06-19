@@ -1,15 +1,17 @@
 @import "./imports.css";
 
+:root {
+  --theme-bg: oklch(20.8% 0.042 265.755 / 0.05);
+  --theme-backdrop: blur(5px);
+  --theme-color: oklch(36.343% 0.00742 264.521);
+  --theme-secondary: oklch(71.547% 0.00008 271.152);
+}
 * {
   font-family: "Fira Code", monospace;
-  /* outline: 1px solid var(--theme); */
-}
-:root{
-  --theme-bg: oklch(20.8% 0.042 265.755 / 0.05);
-  --theme-backdrop: blur(5px)
+  /* outline: 1px solid var(--theme-secondary); */
 }
 
-.glassmorph{
+.glassmorph {
   background-color: var(--theme-bg);
   backdrop-filter: var(--theme-backdrop);
 }
@@ -17,3 +19,14 @@
   font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
 }
 
+._grid {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23f1f5f9'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  background-position: center;
+}
+
+.text-theme {
+  color: var(--theme-color);
+}
+.text-theme-secondary {
+  color: var(--theme-secondary);
+}

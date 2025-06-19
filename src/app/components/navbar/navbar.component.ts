@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-    selector: 'app-navbar',
-    imports: [CommonModule, RouterLink, RouterLinkActive],
-    templateUrl: './navbar.component.html',
-    styleUrl: './navbar.component.css'
+  selector: 'app-navbar',
+  imports: [CommonModule, RouterLink, RouterLinkActive],
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
   navActive: boolean = false;
@@ -15,25 +15,16 @@ export class NavbarComponent {
     name: string;
     path: string;
     icon: string;
-    accent: string;
   }> = [
     {
-      name: 'home',
+      name: 'about',
       path: '/',
       icon: 'person_4',
-      accent: '59, 130, 246',
-    },
-    {
-      name: 'more',
-      path: '/more',
-      icon: 'receipt_long',
-      accent: '33, 196, 93',
     },
     {
       name: 'work',
       path: '/work',
       icon: 'tactic',
-      accent: '244, 63, 94',
     },
   ];
   toggleNav() {

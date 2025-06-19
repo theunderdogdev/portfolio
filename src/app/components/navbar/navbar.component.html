@@ -5,8 +5,7 @@
       class="nav-link"
       [routerLink]="route.path"
       routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: route.name === 'home' }"
-      [style]="{ '--accent': route.accent }"
+      [routerLinkActiveOptions]="{ exact: route.name === 'about' }"
     >
       <span class="icon material-symbols-rounded">{{ route.icon }}</span>
       <span class="text-info">{{ route.name }}</span>
