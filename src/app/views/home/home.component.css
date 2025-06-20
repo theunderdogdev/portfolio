@@ -1,4 +1,8 @@
 @import "../../../imports.css";
+
+.parent {
+  @apply scroll-smooth;
+}
 .outlined-text {
   -webkit-text-stroke: 2px var(--theme-color);
   color: transparent;
@@ -6,16 +10,16 @@
 .meta-title > span:not(:first-child)::before {
   content: "\00a0\007c\00a0";
 }
-
-/* .animate-bg{
-  animation: backgroundScale 4s infinite alternate ease-in-out;
+.view {
+  @apply min-h-screen p-3;
 }
 
-@keyframes backgroundScale {
-  from{
-    background-size: 10%;
-  }
-  to{
-    background-size: 30%;
-  }
+.ctrl-btn {
+  @apply flex items-center transition-colors hover:bg-[var(--theme-bg)] text-4xl text-slate-500 justify-center w-12 h-10 border-slate-500 absolute cursor-pointer bottom-0 translate-y-[calc(100%+1rem)];
+}
+/* 
+.education {
+  background-image: url("../../../assets/images/education.svg");
+  background-size: cover;
+  object-fit: contain
 } */
